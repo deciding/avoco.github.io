@@ -12,4 +12,4 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 
 This is a test audio mp3
 
-![](audios/10500.mp3)
+![](audios/103_1241_000000_000001.wav){type=audio/wav}
