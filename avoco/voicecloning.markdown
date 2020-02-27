@@ -12,4 +12,5 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 
 This is a test audio wav
 
-![](audios/103_1241_000000_000001.wav){type=audio/wav}
+![](img/step-60000-align.png)
+![](avoco/audios/10500.mp3)
