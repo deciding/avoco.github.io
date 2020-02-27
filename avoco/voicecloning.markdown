@@ -10,7 +10,4 @@ You can find the source code for the Jekyll new theme at: [github.com/jglovier/j
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
-<audio controls="controls">
-  <source type="audio/wav" src="audios/103_1241_000000_000001.wav"></source>
-  <p>Your browser does not support the audio element.</p>
-</audio>
+![](audios/103_1241_000000_000001.wav)
