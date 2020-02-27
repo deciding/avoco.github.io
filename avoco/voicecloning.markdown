@@ -10,6 +10,4 @@ You can find the source code for the Jekyll new theme at: [github.com/jglovier/j
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
-audios/103_1241_000000_000001.wav
-
-{% miniaudio '/avoco/audios/103_1241_000000_000001.wav' %}
+![](audios/103_1241_000000_000001.wav)
