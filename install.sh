@@ -5,5 +5,16 @@ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 #the following line is ok if ruby is 2.6
-gem install jekyll bundler
+gem install jekyll bundler github-pages
 #gem install jekyll bundler -- --disable-lto
+
+bundle update
+
+mkdir avoco
+cd avoco
+jekyll new .
+#bundle exec jekyll VERSION new .
+
+#change lines in Gemfile to use github-pages
+# test locally
+bundle exec jekyll serve
