@@ -10,6 +10,6 @@ You can find the source code for the Jekyll new theme at: [github.com/jglovier/j
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
-This is a test audio
+This is a test audio mp3
 
 ![](audios/10500.mp3)
