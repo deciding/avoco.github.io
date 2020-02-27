@@ -15,6 +15,7 @@ cd avoco
 jekyll new .
 #bundle exec jekyll VERSION new .
 
-#change lines in Gemfile to use github-pages
+#change lines in Gemfile to use github-pages, and remove jekyll
+bundle update
 # test locally
 bundle exec jekyll serve
