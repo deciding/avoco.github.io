@@ -10,12 +10,13 @@ gem install jekyll bundler github-pages
 
 bundle update
 
-mkdir avoco
-cd avoco
-jekyll new .
-#bundle exec jekyll VERSION new .
-
-#change lines in Gemfile to use github-pages, and remove jekyll
-bundle update
-# test locally
-bundle exec jekyll serve
+## Run following manually
+#mkdir avoco
+#cd avoco
+#jekyll new .
+##bundle exec jekyll VERSION new .
+#
+##change lines in Gemfile to use github-pages, and remove jekyll
+#bundle update
+## test locally
+#bundle exec jekyll serve
