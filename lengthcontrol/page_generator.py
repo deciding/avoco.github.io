@@ -28,7 +28,7 @@ text_list = [
     "互联网软件行业PMI明显好于服务业总体水 .平此外 , 2月份 , 金融业PMI为50.1% , 继续保持在扩张区间 , 对疫情防控和经济社会发展发挥了重要作用 . 官方最新披露数据已经传递出制造业复苏的积极信号 . "
     "据统计局数据 , 截至2月25日 , 全国采购经理调查企业中 , 大中型企业复工率为78.9% , 其中大中型制造业企业达到85.6% . "]
 
-text_template = """<br><br><b>(1) %s<b>"""
+text_template = """<br><br><b>(%d) %s<b>"""
 audio_template = """<div>
     <br>%s倍速度<br>
     <audio controls="controls">
@@ -45,7 +45,7 @@ print(wav_path_list)
 page_file = open("index_cn.html", mode="a")
 
 for index, sentence in enumerate(text_list):
-    print(text_template % sentence, file=page_file)
+    print(text_template % (index, sentence), file=page_file)
     print("\n", file=page_file)
     for speed_path in wav_path_list:
         speed = speed_path.replace("wavs", "").split("\\")[-1]
