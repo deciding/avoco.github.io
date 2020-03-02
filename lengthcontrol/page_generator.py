@@ -1,4 +1,6 @@
+# coding=utf8
 from glob import glob
+import os
 
 dst_file = "index_cn.html"
 text_list = [
@@ -30,10 +32,24 @@ text_template = """<br><br><b>(1) %s<b>"""
 audio_template = """<div>
     <br>%s倍速度<br>
     <audio controls="controls">
-        <source type="audio/mp3" src="audios/cn_speech_control_sample/%s"></source>
+        <source type="audio/mp3" src="%s"></source>
         <p>Your browser does not support the audio element.</p>
     </audio>
 </div>"""
 
 wav_path_list = glob("audios/cn_speech_control_sample/*")
+audio_file_list = [os.path.basename(audio_path)
+                   for audio_path in glob(os.path.join(wav_path_list[0], "*.wav"))]
 print(wav_path_list)
+
+page_file = open("index_cn.html", mode="a")
+
+for index, sentence in enumerate(text_list):
+    print(text_template % sentence, file=page_file)
+    print("\n", file=page_file)
+    for speed_path in wav_path_list:
+        speed = speed_path.replace("wavs", "").split("\\")[-1]
+        audio_file_path = audio_file_list[index]
+        audio_content = audio_template % (speed, os.path.join(speed_path, audio_file_path))
+        print(audio_content, file=page_file)
+        print("\n", file=page_file)
