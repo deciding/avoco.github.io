@@ -5,9 +5,160 @@ permalink: /xtasnet/
 ---
 <div>
     <b>Abstract</b>
+    <p>
+    Extracting the speech of a target speaker from a mixed audio, based on a reference speech from the target speaker, is a challenging yet powerful technology in speech processing. Recent studies of speaker-independent speech separation, such as TasNet, have shown promising results by applying deep neural network over raw time-domain waveform. Such separation neural network does not directly generate reliable and accurate output when a target speaker is explicitly specified, because of the necessary prior on the number of speakers and the lack of robustness when dealing with audios with absent speakers. In this paper, we break these limitations by introducing a new speaker-aware speech masking method, called X-TaSNet. Our proposal adopts new strategies, including a distortion-based loss function and corresponding alternating training scheme, to better address the robustness issue. X-TaSNet significantly enhances the extracted speech quality, tripling SDRi and SI-SNRi of the output speech audio over state-of-the-art voice filtering approach.
+    X-TaSNet also improves the reliability of the results by improving the accuracy of speaker identity in the output audio to 95.4%, such that it returns a silent audio in most cases when the target speaker is not present. These results demonstrate X-TaSNet moves one solid step towards more practical applications of speaker extraction technology.
+    </p>
 </div>
 
-<div style='width:1400px'>
+<div style='width:1400px; max-width:1400px'>
+    <b>X-TaSNet</b>
+    <table>
+        <thead>
+            <tr>
+                <th>Mixed Audio Input</th>
+                <th>Extracted Audio output</th>
+                <th>Reference audio for d-vector</th>
+                <th>Clean audio (ground truth)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_mix1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_out1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_ref1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_trg1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_mix2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_out2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_ref2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_trg2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_mix3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_out3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_ref3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_trg3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_mix4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_out4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_ref4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_trg4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_mix5.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_out5.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_ref5.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/xtasnet_trg5.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style='width:1400px; max-width:1400px'>
+    <b>Baseline (Voicefilter)</b> [<a href="https://google.github.io/speaker-id/publications/VoiceFilter/">link</a>]
     <table>
         <thead>
             <tr>
@@ -66,6 +217,32 @@ permalink: /xtasnet/
                 <td>
                     <audio controls="controls">
                       <source type="audio/wav" src="audios/vf_trg2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/vf_mix3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/vf_out3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/vf_ref3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/vf_trg3.wav"></source>
                       <p>Your browser does not support the audio element.</p>
                     </audio>
                 </td>
