@@ -1,0 +1,150 @@
+---
+layout: page
+title: GAZEV
+permalink: /gazev/
+---
+<h1>GAZEV: GAN-Based Zero Shot Voice Conversion over Non-parallel Speech Corpus</h1>
+<div>
+    <b>Abstract</b>
+    <p>
+    Non-parallel many-to-many voice conversion is recently attracting huge research efforts in speech processing community.
+    A voice conversion system transforms an utterance of a source speaker to the utterance of a target speaker by maintaining the content in the original utterance and replacing the vocal features with the target speaker.
+    Existing solutions, e.g., StarGAN-VC and AutoVC, present promising results, when speech corpus of the speakers is generally available during model training. 
+    Such approaches may not generate speech conversion results with desirable quality, when an unseen speaker is involved in the inference procedure. In this paper, we present GAZEV, our new GAN-based zero shot voice conversion solution, which target to support unseen speakers on both source and target utterance. Our key technical contribution is the adoption of new instance normalization strategy and speaker embedding loss on top of GAN framework, in order to address the limitations of speaking style transfer in existing solutions. Our empirical evaluations demonstrate significant performance improvement, on output speech quality and speaker similarity.
+    </p>
+</div>
+
+<div style='width:1400px; max-width:1400px'>
+    <b>Demos</b>
+    In AUTOVC's demo page [<a href="https://auspicious3000.github.io/autovc-demo/">link</a>], there are only short sentences. To get a better idea of the performance difference, some longer sentences are sampled here.
+    <table>
+        <thead>
+            <tr>
+                <th>Conversion Direction</th>
+                <th>Source</th>
+                <th>Target</th>
+                <th>AUTOVC [<a href="https://auspicious3000.github.io/autovc-demo/">link</a>]</th>
+                <th>GAZEV (proposed)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Seen-Seen
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/s1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/t1.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/autovc_s2s.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/gazev_s2s.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Seen-Unseen
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/s2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/t2.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/autovc_s2u.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/gazev_s2u.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Unseen-Seen
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/s3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/t3.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/autovc_u2s.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/gazev_u2s.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Unseen-UnSeen
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/s4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/t4.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/autovc_u2u.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="controls">
+                      <source type="audio/wav" src="audios/gazev_u2u.wav"></source>
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
